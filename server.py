@@ -33,8 +33,7 @@ class SIPRegisterHandler(socketserver.DatagramRequestHandler):
             print(self.dicc)
         
 if __name__ == "__main__":
-    # Listens at localhost ('') port 6001
-    # and calls the EchoHandler class to manage the request
+    # Calls the EchoHandler class to manage the request
     PORT_SERV = int(sys.argv[1])
     serv = socketserver.UDPServer(('', PORT_SERV), SIPRegisterHandler)
     print("Lanzando servidor UDP de eco...")
